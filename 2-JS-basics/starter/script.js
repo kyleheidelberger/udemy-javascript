@@ -45,7 +45,7 @@ console.log(firstName + ' ' + lastName);
 
 /***********************************
  * Basic Operators
- */
+ 
 let year, yearJohn, yearMark;
 now = 2019;
 ageJohn = 28;
@@ -70,3 +70,36 @@ console.log(typeof ageJohn);
 console.log(typeof 'Mark is older than John');
 let x;
 console.log(typeof x);
+*/
+
+/*************************
+ * Operator Precedence
+ */
+
+let now = 2019;
+let yearJohn = 1987;
+let fullAge = 21;
+
+// Multiple Operators
+let isFullAge = now - yearJohn >= fullAge; // true
+console.log(isFullAge);
+
+// Grouping
+let ageJohn = now - yearJohn;
+console.log(ageJohn);
+let ageMark = 35;
+let average = (ageJohn + ageMark) / 2;
+console.log(average);
+
+// Multiple Assignments
+let x, y;
+x = y = (3 + 5) * 4 - 6;
+console.log(x, y);
+
+// More Operators
+x *= 2;
+console.log(x);
+x += 10;
+console.log(x);
+x++;
+console.log(x);
