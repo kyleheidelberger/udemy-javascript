@@ -390,3 +390,36 @@ console.log(john.indexOf(23));
 let isDesigner = john.indexOf('designer') === -1 ? 'John is not a designer' : ' John is a designer';
 console.log(isDesigner);
  */
+
+ /******************************
+  * CODING CHALLENGE 3
+
+
+function calculateTip(bill) {
+    let tip;
+    if (bill < 50) {
+        tip = bill * .2;
+    }
+    else if (bill >= 50 && bill <= 200) {
+        tip = bill * .15;
+    }
+    else {
+        tip = bill * .1;
+    }
+    return tip
+}
+
+let bills = [124, 48, 268];
+let tips = [calculateTip(bills[0]), calculateTip(bills[1]), calculateTip(bills[2])]
+console.log(tips);
+let finalBills = [];
+
+function finalBill(bill, tip) {
+    return bill + tip
+}
+
+finalBills.push(finalBill(124, calculateTip(124)));
+finalBills.push(finalBill(48, calculateTip(48)));
+finalBills.push(finalBill(268, calculateTip(268)));
+console.log(finalBills);
+  */
