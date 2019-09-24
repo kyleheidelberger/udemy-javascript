@@ -474,3 +474,37 @@ john.calcAge();
 console.log(john);
  */
 
+ /************************************
+  * CODING CHALLENGE 4
+  
+
+let john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    mass: '75',
+    height: '1.5',
+    calcBMI: function(mass, height) {
+        this.BMI = this.mass / (this.height * this.height);
+        return this.BMI;
+    }
+}
+
+let mark = {
+    firstName: 'Mark',
+    lastName: 'Johnson',
+    mass: '200',
+    height: '1.75',
+    calcBMI: function(mass, height) {
+        this.BMI = this.mass / (this.height * this.height);
+        return this.BMI;
+    }
+}
+
+
+if (mark.calcBMI() > john.calcBMI()) {
+    console.log(mark.firstName + ' ' + mark.lastName + ' has the highest BMI with ' + mark.BMI + '.');
+}
+else {
+    console.log(john.firstName + ' ' + john.lastName + ' has the highest BMI with ' + john.BMI + '.')
+}
+*/
