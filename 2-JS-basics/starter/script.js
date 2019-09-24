@@ -118,7 +118,8 @@ console.log(x);
 
  let markBMI = markMass / (markHeight * markHeight);
  let johnBMI = johnMass / (johnHeight * johnHeight);
-
+ console.log(markBMI, johnBMI)
+ 
  let isMarkFatter = markBMI > johnBMI;
 
  console.log('Is mark fatter than john? ' + isMarkFatter);
