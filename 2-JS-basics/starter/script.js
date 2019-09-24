@@ -508,3 +508,31 @@ else {
     console.log(john.firstName + ' ' + john.lastName + ' has the highest BMI with ' + john.BMI + '.')
 }
 */
+
+/*****************************************
+ * Loops and iteration
+ */
+
+// for (let i = 1; i < 20; i += 2) {
+//     console.log(i);
+// }
+
+// let john = ['John', 'Smith', 1990, 'designer', false];
+
+// for (let i = 0; i < john.length; i++) {
+//     console.log(john[i]);
+// }
+
+// let i = 0;
+// while (i < john.length) {
+//     console.log(john[i]);
+//     i++;
+// }
+
+// continue and break statements
+let john = ['John', 'Smith', 1990, 'designer', false];
+
+for (let i = 0; i < john.length; i++) {
+    if (typeof john[i] !== 'string') continue;
+    console.log(john[i]);
+}
