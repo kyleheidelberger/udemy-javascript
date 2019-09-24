@@ -261,7 +261,7 @@ switch (true) {
 
 /***************************
  * CODING CHALLENGE 2
- */
+ 
 
 let johnAvg = (89 + 120 + 103) / 3
 let mikeAvg = (116 + 94 + 123) / 3
@@ -295,3 +295,37 @@ switch (true) {
         break;
 
 }
+*/
+
+/************************************
+ * Functions
+
+
+function calculateAge(birthYear) {
+    return 2019 - birthYear;
+}
+
+let ageJohn = calculateAge(1987);
+let ageMike = calculateAge(1948);
+let ageJane = calculateAge(1969);
+
+console.log(ageJohn, ageMike, ageJane);
+
+function yearsUntilRetirement(year, firstName) {
+    let age = calculateAge(year);
+    let retirement = 65 - age;
+
+    if (retirement > 0) {
+        console.log(firstName + ' retires in ' + retirement + ' years.');
+    }
+    else {
+        console.log(firstName + ' is already retired.')
+    }
+    
+}
+
+yearsUntilRetirement(1987, 'Kyle');
+yearsUntilRetirement(1948, 'Mike');
+yearsUntilRetirement(1969, 'Jane');
+
+ */
