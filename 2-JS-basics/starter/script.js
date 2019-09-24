@@ -107,7 +107,7 @@ console.log(x);
 
 /*********************
  * CODING CHALLENGE 1
- */
+ 
 
  let markMass, markHeight, johnMass, johnHeight;
 
@@ -123,3 +123,46 @@ console.log(x);
  let isMarkFatter = markBMI > johnBMI;
 
  console.log('Is mark fatter than john? ' + isMarkFatter);
+*/
+
+/******************************
+ * If / else statements
+
+
+let firstName = 'John';
+let civilStatus = 'single';
+
+if (civilStatus === 'married') {
+    console.log(firstName + ' is married!');
+}
+else {
+    console.log(firstName + ' is single!');
+}
+
+let isMarried = false;
+if (isMarried) {
+    console.log(firstName + ' is married!')
+}
+else {
+    console.log(firstName + ' is single!')
+}
+
+
+let markMass, markHeight, johnMass, johnHeight;
+
+markMass = 78;
+markHeight = 1.69;
+johnMass = 92;
+johnHeight = 1.95;
+
+let markBMI = markMass / (markHeight * markHeight);
+let johnBMI = johnMass / (johnHeight * johnHeight);
+console.log(markBMI, johnBMI)
+
+if (markBMI > johnBMI) {
+    console.log('Mark is fatter than John.');
+}
+else {
+    console.log('John is fatter than Mark.');
+}
+*/
