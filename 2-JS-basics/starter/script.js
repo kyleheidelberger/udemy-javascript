@@ -423,3 +423,33 @@ finalBills.push(finalBill(48, calculateTip(48)));
 finalBills.push(finalBill(268, calculateTip(268)));
 console.log(finalBills);
   */
+
+/********************************
+* Objects and Properties
+
+// Object literal
+let john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['Jane', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false
+};
+
+console.log(john.firstName);
+console.log(john['lastName']);
+let x = 'birthYear';
+console.log(john[x]);
+
+john.job = 'designer';
+john['isMarried'] = true;
+console.log(john);
+
+// new object syntax
+let jane = new Object();
+jane.firstName = 'Jane';
+jane.birthYear = 1969;
+jane['lastName'] = 'Smith';
+console.log(jane);
+*/
