@@ -550,6 +550,78 @@ for (let i = john.length - 1; i >= 0; i--) {
 
 /****************************
  * CODING CHALLENGE 5
- */
 
- 
+
+ let johnBillSubTotals = [124, 48, 268, 180, 42];
+ let johnTips = [];
+ let johnBillTotals = [];
+
+for (let i = 0; i < johnBillSubTotals.length; i++) {
+    let tip;
+    if (johnBillSubTotals[i] < 50) {
+        tip = johnBillSubTotals[i] * .2;
+    } 
+    else if (johnBillSubTotals[i] >= 50 && johnBillSubTotals[i] <= 200) {
+        tip = johnBillSubTotals[i] * .15;
+    }
+    else {
+        tip = johnBillSubTotals[i] * .1;
+    }
+    johnTips.push(tip);
+}
+
+console.log('john tips', johnTips);
+
+for (let i = 0; i < johnBillSubTotals.length; i++) {
+    johnBillTotals.push(johnBillSubTotals[i] + johnTips[i])
+}
+
+console.log('john totals:', johnBillTotals)
+
+let markBillSubTotals = [77, 375, 110, 45];
+let markTips = [];
+let markBillTotals = [];
+
+for (let i = 0; i < markBillSubTotals.length; i++) {
+    let tip;
+    if (markBillSubTotals[i] < 100) {
+        tip = markBillSubTotals[i] * .2;
+    } 
+    else if (markBillSubTotals[i] >= 10 && markBillSubTotals[i] <= 300) {
+        tip = markBillSubTotals[i] * .1;
+    }
+    else {
+        tip = markBillSubTotals[i] * .25;
+    }
+    markTips.push(tip);
+}
+
+console.log('mark tips', markTips);
+
+for (let i = 0; i < markBillSubTotals.length; i++) {
+    markBillTotals.push(markBillSubTotals[i] + markTips[i])
+}
+
+console.log('Mark totals:', markBillTotals)
+
+function averageTips(tips) {
+    let total = 0;
+    for (let i = 0; i < tips.length; i++) {
+        total += tips[i]; 
+    }
+    let average = total / tips.length;
+    return average;
+}
+
+let johnAvg = averageTips(johnTips);
+let markAvg = averageTips(markTips);
+console.log('john avg', johnAvg);
+console.log('mark avg', markAvg);
+
+if (johnAvg < markAvg) {
+    console.log('Mark\'s family paid the highest tips on average.');
+}
+else {
+    console.log('John\'s family paid the highest tips on average.');
+}
+ */
