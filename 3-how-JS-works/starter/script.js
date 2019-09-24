@@ -1,5 +1,6 @@
 ///////////////////////////////////////
 // Lecture: Hoisting
+/*
 calculateAge(1987);
 
 function calculateAge(year) {
@@ -23,6 +24,7 @@ function foo() {
 };
 foo();
 console.log(age);
+*/
 
 
 
@@ -78,10 +80,9 @@ function first() {
 
 function third() {
     var d = 'John';
-    console.log(a + b + c + d);
+    console.log(a + d);
 }
 */
-
 
 
 ///////////////////////////////////////
