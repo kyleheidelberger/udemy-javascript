@@ -74,7 +74,7 @@ console.log(typeof x);
 
 /*************************
  * Operator Precedence
- */
+ 
 
 let now = 2019;
 let yearJohn = 1987;
@@ -103,3 +103,22 @@ x += 10;
 console.log(x);
 x++;
 console.log(x);
+*/
+
+/*********************
+ * CODING CHALLENGE 1
+ */
+
+ let markMass, markHeight, johnMass, johnHeight;
+
+ markMass = 78;
+ markHeight = 1.69;
+ johnMass = 92;
+ johnHeight = 1.95;
+
+ let markBMI = markMass / (markHeight * markHeight);
+ let johnBMI = johnMass / (johnHeight * johnHeight);
+
+ let isMarkFatter = markBMI > johnBMI;
+
+ console.log('Is mark fatter than john? ' + isMarkFatter);
