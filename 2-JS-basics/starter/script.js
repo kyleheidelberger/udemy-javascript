@@ -329,3 +329,29 @@ yearsUntilRetirement(1948, 'Mike');
 yearsUntilRetirement(1969, 'Jane');
 
  */
+
+ /***********************
+  * Function Statements and Expressions
+  
+
+// Function Declaration
+// function whatDoYouDo(job, firstname) {}
+
+// Function Expression
+let whatDoYouDo = function(job, firstName) {
+    switch(job) {
+        case 'teacher':
+            return firstName + ' teaches kids how to code.';
+        case 'driver':
+            return firstName + ' drives people around the city.'
+        case 'designer':
+            return firstName + ' designes super usable web sites.'
+        default:
+            return firstName + ' has another awesome job.'
+    }
+}
+
+console.log(whatDoYouDo('teacher', 'John'));
+console.log(whatDoYouDo('designer', 'Jane'));
+console.log(whatDoYouDo('garbage man', 'Mark'));
+*/
