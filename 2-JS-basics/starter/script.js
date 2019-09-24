@@ -258,3 +258,40 @@ switch (true) {
       console.log('The == operator does type coercion!');
   }
   */
+
+/***************************
+ * CODING CHALLENGE 2
+ */
+
+let johnAvg = (89 + 120 + 103) / 3
+let mikeAvg = (116 + 94 + 123) / 3
+let maryAvg = (97 + 134 + 105) / 3
+
+console.log('Mike\'s Score = ', mikeAvg);
+console.log('John\'s Score = ', johnAvg);
+console.log('Mary\'s Score = ', maryAvg);
+
+switch (true) {
+    case johnAvg > mikeAvg && johnAvg > maryAvg:
+        console.log('John wins!');
+        break;
+    case mikeAvg > johnAvg && mikeAvg > maryAvg:
+        console.log('Mike wins!');
+        break;
+    case maryAvg > johnAvg && maryAvg > mikeAvg:
+        console.log('Mary wins!');
+        break;
+    case johnAvg === mikeAvg === maryAvg:
+        console.log('Three way tie!');
+        break;
+    case johnAvg > mikeAvg && johnAvg === maryAvg:
+        console.log('John and Mary tie!');
+        break;
+    case mikeAvg > johnAvg && mikeAvg === maryAvg:
+        console.log('Mike and Mary tie!');
+        break;
+    case johnAvg > maryAvg && johnAvg === mikeAvg:
+        console.log('John and Mike tie!');
+        break;
+
+}
