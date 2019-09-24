@@ -187,3 +187,51 @@ else {
     console.log(firstName + ' is a man.');
 }
  */
+
+/**********************************
+ * Ternary Operator and Switch Statements
+
+
+let firstName = 'John';
+let age = 16;
+
+// Ternary Operator
+age >= 12 ?console.log(firstName + ' can legally drink alcohol.') : console.log(firstName + ' can\'t legally drink alcohol');
+
+let drink = age >= 21 ? 'alcohol' : 'water';
+console.log(drink);
+
+// Switch Statement
+let job = 'teacher';
+switch (job) {
+    case 'teacher':
+    case 'instructor':
+        console.log(firstName + ' teaches kids.');
+        break;
+    case 'driver':
+        console.log(firstName + ' drives people around the city.');
+        break;
+    case 'designer':
+        console.log(firstName + ' designs web sites.');
+        break;
+    default:
+        console.log(firstName + ' does something else.');
+
+}
+
+switch (true) {
+    case age < 13:
+        console.log(firsName + ' is a boy.');
+        break;
+    case age >= 13 && age < 20:
+        console.log(firstName + ' is a teenager.');
+        break;
+    case age >= 20 && age < 30:
+        console.log(firstName + ' is a young man.');
+        break;
+    default:
+        console.log(firstName + ' is a man.');
+        break;
+
+}
+ */
