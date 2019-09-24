@@ -511,7 +511,7 @@ else {
 
 /*****************************************
  * Loops and iteration
- */
+ 
 
 // for (let i = 1; i < 20; i += 2) {
 //     console.log(i);
@@ -530,9 +530,26 @@ else {
 // }
 
 // continue and break statements
-let john = ['John', 'Smith', 1990, 'designer', false];
+let john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
 
 for (let i = 0; i < john.length; i++) {
-    if (typeof john[i] !== 'string') continue;
+    if (typeof john[i] !== 'string') continue; // continues through loop but skips over objects not strings
     console.log(john[i]);
 }
+
+for (let i = 0; i < john.length; i++) {
+    if (typeof john[i] !== 'string') break; // breaks out of loop when reaches object that isnt string
+    console.log(john[i]);
+}
+
+// Looping backwards
+for (let i = john.length - 1; i >= 0; i--) {
+    console.log(john[i]);
+}
+*/
+
+/****************************
+ * CODING CHALLENGE 5
+ */
+
+ 
