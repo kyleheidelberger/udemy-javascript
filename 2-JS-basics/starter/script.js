@@ -235,3 +235,26 @@ switch (true) {
 
 }
  */
+
+ /*******************************
+  * Truthy and Falsy values and equality operators
+
+  // falsy values: undefined, null, 0, '', NaN (converted to false in if/else condition)
+
+  // truthy values: all other values
+
+  let height;
+  height = 23;
+  
+  if (height || height === 0) {
+      console.log('Variable is defined');
+  }
+  else {
+      console.log('Variable has not been defined.')
+  }
+
+  // Equality Operators
+  if (height == '23') {
+      console.log('The == operator does type coercion!');
+  }
+  */
