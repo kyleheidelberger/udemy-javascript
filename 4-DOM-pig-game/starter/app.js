@@ -8,23 +8,13 @@ GAME RULES:
 - The first player to reach 100 points on GLOBAL score wins the game
 
 */
-let scores, roundScore, activePlayer;
+let scores, roundScore, activePlayer, gamePlaying;
 
-scores = [0, 0];
-roundScore = 0;
-activePlayer = 0;
-
-// set both player scores to zero
-document.getElementById('score-0').textContent = 0;
-document.getElementById('score-1').textContent = 0;
-document.getElementById('current-0').textContent = 0;
-document.getElementById('current-1').textContent = 0;
-
-// hide die at start of game
-document.querySelector('.dice').style.display = 'none';
+newGame();
 
 // roll die
 document.querySelector('.btn-roll').addEventListener('click', function() {
+    if(gamePlaying) {
     // get random number
     let dice = Math.floor(Math.random() * 6) + 1;
     // display result
@@ -42,9 +32,11 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
         // End turn; Next player's turn
         nextPlayer();
         }
+    }
 });
 
 document.querySelector('.btn-hold').addEventListener('click', function() {
+    if (gamePlaying) {
     // add current score to total score
     scores[activePlayer] += roundScore;
     
@@ -57,9 +49,11 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
         document.querySelector('.dice').style.display = 'none';
         document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
         document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
-        }
+        gamePlaying = false;
+        } 
     else {
         nextPlayer();
+    }
     }
 });
 
@@ -74,4 +68,33 @@ function nextPlayer () {
     document.querySelector('.player-1-panel').classList.toggle('active');
 
     document.querySelector('.dice').style.display = 'none';
+}
+
+document.querySelector('.btn-new').addEventListener('click', newGame);
+
+function newGame() {
+    scores = [0, 0];
+    roundScore = 0;
+    activePlayer = 0;
+    gamePlaying = true;
+
+    // set both player scores to zero
+    document.getElementById('score-0').textContent = 0;
+    document.getElementById('score-1').textContent = 0;
+    document.getElementById('current-0').textContent = 0;
+    document.getElementById('current-1').textContent = 0;
+
+    // hide die at start of game
+    document.querySelector('.dice').style.display = 'none';
+
+    // reset player names
+    document.getElementById('name-0').textContent = 'Player 1';
+    document.getElementById('name-1').textContent = 'Player 2';
+    // remove winner class and active class
+    document.querySelector('.player-0-panel').classList.remove('winner');
+    document.querySelector('.player-1-panel').classList.remove('winner');
+    document.querySelector('.player-0-panel').classList.remove('active');
+    document.querySelector('.player-1-panel').classList.remove('active');
+    // add active class to Player 1
+    document.querySelector('.player-0-panel').classList.add('active');
 }
