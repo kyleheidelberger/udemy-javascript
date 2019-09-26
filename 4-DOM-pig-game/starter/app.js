@@ -14,8 +14,7 @@ scores = [0, 0];
 roundScore = 0;
 activePlayer = 0;
 
-//document.querySelector('#current-' + activePlayer).textContent = dice;
-//document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
+
 //let x = document.querySelector('#score-0').textContent;
 
 // set both player scores to zero
@@ -24,9 +23,10 @@ document.getElementById('score-1').textContent = 0;
 document.getElementById('current-0').textContent = 0;
 document.getElementById('current-1').textContent = 0;
 
+// hide die at start of game
 document.querySelector('.dice').style.display = 'none';
 
-
+// roll die
 document.querySelector('.btn-roll').addEventListener('click', function() {
     // get random number
     let dice = Math.floor(Math.random() * 6) + 1;
@@ -34,6 +34,25 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
     let diceDOM = document.querySelector('.dice');
     diceDOM.style.display = 'block';
     diceDOM.src = 'dice-' + dice + '.png';
+    // document.querySelector('#score-' + activePlayer).textContent = roundScore;
     // update round store if rolled num NOT 1
-    document.getElementById('score-0').textContent = 0;
+    if (dice !== 1) {
+        // Add score
+        roundScore += dice;
+        document.querySelector('#current-' + activePlayer).textContent = roundScore;
+    }
+    else {
+        // End turn; Next player's turn
+        activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+        roundScore = 0;
+
+        document.getElementById('current-0').textContent = '0';
+        document.getElementById('current-1').textContent = '0';
+
+        document.querySelector('.player-0-panel').classList.toggle('active');
+        document.querySelector('.player-1-panel').classList.toggle('active');
+
+        document.querySelector('.dice').style.display = 'none';
+
+        }
 });
